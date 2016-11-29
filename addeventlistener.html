@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script>
+  function loadFunction(){
+	var addevent = document.getElementById("eventListen");
+	//attachEvent has been working on before ie9
+	if(addevent.addEventListener){
+		addevent.addEventListener("mousedown", function(){ alert("yes")});
+	}
+	else
+		alert("no")
+  }
+  </script>
+ </head>
+ <body onload="loadFunction()">
+  <!--  -->
+  <input type="button" id="eventListen" class="eventListen" value="Click me" />
+
+ </body>
+</html>

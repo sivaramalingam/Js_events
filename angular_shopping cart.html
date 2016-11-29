@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" ng-app>
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+
+ </head>
+ <body ng-controller="ShoppingCart">
+	<div>
+		<h3>Your online shopping cart</h3>
+		<div ng-repeat="item in items">
+			<span>{{item.title}}</span>
+			<span>{{item.price}}</span>
+			<input type="text" ng-model="item.quantity"/>
+			
+		</div>
+		<span>{{text.msg}}</span>
+	</div>
+	 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+	<script>
+		function ShoppingCart($scope){
+			alert();
+			$scope.items = [
+			{title: "tisk", price: 100, quantity: 3},
+			{title: "rask", price: 200, quantity: 5},
+			{title: "tesr", price: 300, quantity: 3},
+			];
+			/* $scope.items = [
+		  {title: 'Paint pots', quantity: 8, price: 3.95},
+		  {title: 'Polka dots', quantity: 17, price: 12.95},
+		  {title: 'Pebbles', quantity: 5, price: 6.95}
+		];*/
+			$scope.text ={ msg: 'alert message'};
+		}
+	</script>
+ </body>
+</html>
